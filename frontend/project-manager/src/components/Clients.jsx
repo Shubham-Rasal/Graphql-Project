@@ -21,14 +21,15 @@ const Clients = () => {
 
 
     return (
-        <div className='container'>
+        <div className='container row '>
             <h3>Clients</h3>
-            <table className='table table-striped' >
+
+            <table className='table table-striped ' >
                 <thead>
                     <tr>
-                        <th colSpan="2" >Name</th>
-                        <th colSpan="2">Email</th>
-                        <th colSpan="2">Phone</th>
+                        <th colSpan="1" >Name</th>
+                        <th colSpan="1">Email</th>
+                        <th colSpan="1">Phone</th>
                     </tr>
                 </thead>
                 <tbody>

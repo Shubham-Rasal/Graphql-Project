@@ -12,14 +12,12 @@ const AddProjectModal = () => {
     const [status, setStatus] = useState('new');
     const [clientId, setClientId] = useState('');
 
-
-   
     const [addProject] = useMutation(ADD_PROJECT, {
         variables: {
+            clientId: clientId,
             name: projectname,
             description: description,
             status: status,
-            clientId: clientId
         },
         update(cache, { data: { addProject } }) {
             const { projects } = cache.readQuery({ query: GET_PROJECTS });
@@ -39,8 +37,8 @@ const AddProjectModal = () => {
 
 
 
-     
-    
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault();

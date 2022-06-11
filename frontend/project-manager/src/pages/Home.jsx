@@ -6,7 +6,7 @@ import AddProjectModal from '../components/AddProjectModal'
 const Home = () => {
   return (
     <>
-    <div className="container">
+    <div className="container d-flex flex-column ">
         <div className="d-flex w-50">
 
         <AddClientModal/>

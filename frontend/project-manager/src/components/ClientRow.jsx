@@ -21,10 +21,10 @@ const ClientRow = ({ client }) => {
     });
     return (
         <tr>
-            <td colSpan="2" >{client.name}</td>
-            <td colSpan="2">{client.email}</td>
-            <td colSpan="2">{client.phone}</td>
-            <td colSpan="2">
+            <td colSpan="1" >{client.name}</td>
+            <td colSpan="1">{client.email}</td>
+            <td colSpan="1">{client.phone}</td>
+            <td colSpan="1">
                 <button className='btn btn-danger' onClick={deleteClient}>
                     <FaTrash />
                 </button>

@@ -2,6 +2,8 @@ import { Link, useParams } from 'react-router-dom'
 import { useQuery } from '@apollo/client'
 import { GET_PROJECT } from '../Queries/projectQueries'
 import ClientInfo from '../components/ClientInfo'
+import DeleteProjectButton from '../components/DeleteProjectButton'
+import UpdateProjectButton from '../components/UpdateProjectButton'
 
 const Project = () => {
 
@@ -43,11 +45,14 @@ const Project = () => {
                             </div>
 
                             <ClientInfo client={project.client} />
+                            <DeleteProjectButton projectId={project.id} />
+                            <UpdateProjectButton project ={project}/>
+                            <br></br>
 
 
+                        <Link className='btn  btn-warning ' to={'/'}>Back</Link>
                         </div>
 
-                        <Link className='btn btn-sm w-25 btn-warning' to={'/'}>Back</Link>
 
 
                     </div>
