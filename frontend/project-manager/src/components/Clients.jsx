@@ -1,4 +1,4 @@
-import { gql, useQuery } from '@apollo/client'
+import {  useQuery } from '@apollo/client'
 import ClientRow from './ClientRow'
 
 import { GET_CLIENTS } from '../Queries/clientQueries';
@@ -26,9 +26,9 @@ const Clients = () => {
             <table className='table table-striped' >
                 <thead>
                     <tr>
-                        <th >Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
+                        <th colSpan="2" >Name</th>
+                        <th colSpan="2">Email</th>
+                        <th colSpan="2">Phone</th>
                     </tr>
                 </thead>
                 <tbody>

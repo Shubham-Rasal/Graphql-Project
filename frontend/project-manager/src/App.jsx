@@ -2,9 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import {ApolloClient,ApolloProvider,InMemoryCache} from '@apollo/client'
-import Clients from './components/Clients'
 
-
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import Home from './pages/Home'
+import PageNotFound from './pages/PageNotFound'
+import Project from './pages/Project'
 const cache = new InMemoryCache({
   typePolicies: {
     Query: {
@@ -36,18 +38,18 @@ const client = new ApolloClient({
 
 function App() {
   
-
-
-
-
   return (
     <>
      <ApolloProvider client={client}>
+      <Router>
+
      <Header />
-      <div className="container">
-        <h1>Hello</h1>
-        <Clients/>
-      </div>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/project/:id' element={<Project/>}></Route>
+        <Route path='*' element={<PageNotFound/>}></Route>
+      </Routes>
+      </Router>
      </ApolloProvider>
     </>
   )
